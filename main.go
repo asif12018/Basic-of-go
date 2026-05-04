@@ -3,9 +3,53 @@ package main
 import "fmt"
 
 
+//calling a variable
 
-func makeCoffe (kind string){
-	fmt.Printf("Making %s coffee...... \n",kind)
+// if u use full colun the its mean declaring a variable
+// name := "asif" //short way | most used in real application
+// name string:= "asif" //wrong way
+// var name = "asif" //wrong way
+
+//if u dont use colon thats means your reassigning a value for a variable
+
+// name= "asif sheikh"
+
+//function with return value
+// func makeCoffe (kind string, isSugar bool) string {
+// 	if(isSugar){
+// 		result := fmt.Sprintf("Making %s coffee with sugar...... \n",kind)
+// 		return result
+// 	}else{
+// 		result := fmt.Sprintf("Making %s coffee without sugar...... \n",kind)
+// 		return result
+// 	}
+// }
+
+//funciton with multiple return value
+// func makeCoffe (kind string, isSugar bool) (string, int) {
+// 	if(isSugar){
+// 		const price int = 25
+// 		result := fmt.Sprintf("Making %s coffee with sugar...... \n",kind)
+// 		return result, price
+// 	}else{
+// 		const price int = 20
+// 		result := fmt.Sprintf("Making %s coffee without sugar...... \n",kind)
+// 		return result, price
+// 	}
+// }
+
+//function with named return value
+func makeCoffe (kind string, isSugar bool) (coffee string, price int) {
+	if(isSugar){
+		 price  = 25
+		coffee = fmt.Sprintf("Making %s coffee with sugar...... \n",kind)
+		//you dont have to say what to return. he already knows what to return
+		return 
+	}else{
+		 price  = 20
+		coffee = fmt.Sprintf("Making %s coffee without sugar...... \n",kind)
+		return 
+	}
 }
 
 
@@ -61,9 +105,14 @@ func main() {
 	// fmt.Println(formattedString)
 
 	//function creationg
-	makeCoffe("black")
-	makeCoffe("Latte")
+	// makeCoffe("black", false)
+	// makeCoffe("Latte", true)
 	
+	firstCustomer, firstBill := makeCoffe("black coffee", true)
+	fmt.Printf("This is my coffee %s and this is your bill %d \n", firstCustomer, firstBill)
+	secondCustomer, secondBill := makeCoffe("Latte", false)
+	fmt.Printf("This is my coffee %s and this is your bill %d \n", secondCustomer, secondBill)
+
 
 }
 
