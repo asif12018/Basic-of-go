@@ -13,6 +13,15 @@ To run the main application and see the output, execute the following command in
 go run main.go
 ```
 
+### 🖥️ Expected Output
+After running the command, you should see the following output in your terminal:
+```text
+This is my coffee Making black coffee coffee with sugar...... 
+ and this is your bill 25 
+This is my coffee Making Latte coffee without sugar...... 
+ and this is your bill 20 
+```
+
 ---
 
 ## 📚 Key Concepts Covered
