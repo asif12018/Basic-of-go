@@ -38,6 +38,7 @@ import "fmt"
 // 	}
 // }
 
+//
 //function with named return value
 func makeCoffe (kind string, isSugar bool) (coffee string, price int) {
 	if(isSugar){
